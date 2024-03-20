@@ -1,10 +1,5 @@
 # Collocation-Extraction
 
-Authors:
-
-- Daniel Hayon: 206520553
-- Yuval Sadeh: 207466509
-- Gilad Rozner: 318317708
 
 ### Link to the bucket in S3 
 s3://hayon123 
