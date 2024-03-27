@@ -1,17 +1,25 @@
 # Collocation-Extraction
 
+## Abstract
 
-### Link to the bucket in S3 
-s3://hayon123 
+This project focuses on automatically extracting collocations from the Google 2-grams dataset using Amazon Elastic Map Reduce. Collocations are essential in natural language processing and information extraction applications. We will use Normalized Pointwise Mutual Information (NPMI) to identify collocations.
 
-### ARN resource
-arn:aws:s3:::hayon123
+## Collocations
 
-This application automatically extracts collocations from the Google 2-grams dataset using Amazon Elastic Map Reduce.
+A collocation is a sequence of words that co-occur more often than expected by chance. For example, "crystal clear" and "cosmetic surgery" are collocations. In this project, we will use NPMI to determine if a pair of ordered words is a collocation. 
 
-## Description
+## Normalized PMI
 
-This Map-Reduce program produces the list of top-100 collocations for each decade for English and Hebrew, with their NPMI ratios (in descending order).
+Pointwise Mutual Information (PMI) is a measure of association between two words. Normalized PMI is calculated based on the count of a word pair, the count of each individual word, and the total number of bigrams in the corpus.
+
+## The Project Goal
+
+A map-reduce job for collocation extraction for each decade using Amazon Elastic MapReduce. The criteria for collocations are based on the normalized PMI value. The input is the Hebrew and English 2-Gram datasets of Google Books Ngrams.
+
+## Stop Words
+
+Stop words are words that appear frequently in the corpus and are often filtered out. In this project, we remove all bigrams that contain stop words from the counts.
+
 
 ## Input
 
